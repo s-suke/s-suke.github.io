@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ここには何もないよ</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      margin-top: 100px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3em;
+      color: #4000ff;
+      text-shadow: 2px 2px 4px #000000;
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      color: #666;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+   .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+  </style>
+</head>
+<body>
+  <h1>ここにはなにもありませんがねこはいます</h1>
+  <img id="randomImage" src="" alt="かわいい子猫">
+  
+  <footer id="footer" style="display: none;">
+    <p><a href="https://s-suke.github.io">links</a></p>
+    <a href="http://shi-mann.sakura.ne.jp/dame/">
+      <img src="http://shi-mann.sakura.ne.jp/dame/damebana.gif" width="200" height="40" alt="ダメなサイトリング">
+    </a>
+    <a href="https://sites.google.com/view/happy-busy/">
+      <img src="/EmbeddedImage.png">
+    </a>
+    <a href="http://www7a.biglobe.ne.jp/~bp-827z/no_sense/">
+      <img src="/nosensebanner.png" width="200" height="40">
+    </a>
+  </footer>
+
+  <script>
+    function changeRandomImage() {
+      var width = Math.floor(Math.random() * 400) + 200;
+      var height = Math.floor(Math.random() * 400) + 200;
+      var imageUrl = `https://placekitten.com/${width}/${height}`;
+      document.getElementById('randomImage').src = imageUrl;
+    }
+
+    function showFooter() {
+      document.getElementById('footer').style.display = 'block';
+    }
+
+    window.onload = function() {
+      var image = document.getElementById('randomImage');
+      image.onload = function() {
+        showFooter();
+      };
+      changeRandomImage(); // 画像を変更する処理を最初に実行
+    };
+  </script>
+</body>
+</html>
