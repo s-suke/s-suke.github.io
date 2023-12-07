@@ -34,13 +34,7 @@ func main() {
     defer cancel()
 }
 
-func loadCounter() int {
-    // 略
-}
 
-func saveCounter(counter int) {
-  // 略
-}
 
 type MainHandler struct{}
 
@@ -53,26 +47,7 @@ Please use UTF-8 encoding.
 ----------
 □□□□ あなたは ` + fmt.Sprintf("%05d", counter) + ` 人目の訪問者です □□□□
 ----------
- ∧＿＿∧ 
-( ´・ω・）   _                   _           _                    _
-|ﾉ| ﾉ)ﾉ)|ゝ | |                 (_)         | |                  | |
-ﾒ＿ > ❙ ﾚﾉ_ | |_ _ __  _ __ ___  _  ___  ___| |_       _ __   ___| |_
-| '_ \ / _ \| __| '_ \| '__/ _ \| |/ _ \/ __| __|     | '_ \ / _ \ __|
-| |_) | (_) | |_| |_) | | | (_) | |  __/ (__| |_   _  | | | |  __/ |_
-| .__/ \___/ \__| .__/|_|  \___/| |\___|\___|\__| (_) |_| |_|\___|\__|
-| |             | |            _/ |
-|_|             |_|           |__/
 
-# Profile
-Name: potpro (ぽとぷろ)
-Blog: blog.potproject.net (https://blog.potproject.net)
-Github: @potproject (https://github.com/potproject)
-X(Twitter): @potpro (https://twitter.com/potpro)
-Mastodon: https://mastodon.potproject.net/@potpro
-Bluesky: https://bsky.app/profile/potp.ro
-----------
-
-`
     for _, c := range str {
         w.Write([]byte(string(c)))
         time.Sleep(50 * time.Millisecond)
